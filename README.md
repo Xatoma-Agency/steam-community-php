@@ -1,3 +1,3 @@
 # PHP-SteamCommunity
 
-This package is available to be installed using Composer via Packagist.
+PHP Wrapper for the steam community
