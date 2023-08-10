@@ -133,7 +133,7 @@ class Inventory
             return false;
         }
 
-        return $response;        
+        return $response;
     }
 
     public function parseItems($data, $contextId)
@@ -168,7 +168,7 @@ class Inventory
                 'quality'              => (isset($tags['Quality']) ? $tags['Quality'] : null),               // Consumer Grade
                 'exterior'             => (isset($tags['Exterior']) ? $tags['Exterior'] : null),              // Field-Tested
                 'collection'           => (isset($tags['Collection']) ? $tags['Collection'] : null),            // The Dust 2 Collection
-                'stattrack'            => (stripos($cat, 'StatTrak') !== false) ? true : null,
+                'stattrack'            => (!empty($cat) && stripos($cat, 'StatTrak') !== false) ? true : null,
                 'icon_url'             => (isset($dataItem['icon_url']) ? $this->iconUrl . $dataItem['icon_url'] : null),         // fWFc82js0fmoRAP-qOIPu5THSWqfSmTEL ...
                 'icon_url_large'       => (isset($dataItem['icon_url_large']) ? $this->iconUrl . $dataItem['icon_url_large'] : null),   // fWFc82js0fmoRAP-qOIPu5THSWqfSmTEL ...
                 'description'          => $desc,
