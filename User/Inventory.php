@@ -10,6 +10,7 @@ class Inventory
     private $steamId;
     private $profile;
     private $cacheTime;
+    private $language;
 
     private $iconUrl = 'https://steamcommunity-a.akamaihd.net/economy/image/';
 
@@ -28,7 +29,7 @@ class Inventory
                 return false;
             }
 
-            return $this->loadChosenInventory($steamId, $globalAppIds, $globalAppDetails['contextId'], $useCache);
+            return $this->loadChosenInventory($steamId, $globalAppIds, $contextId, $useCache);
         }
 
         return $this->loadChosenInventory($steamId, $appId, $contextId, $useCache);
